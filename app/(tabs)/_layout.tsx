@@ -1,0 +1,17 @@
+import { HorecaTabBar } from "@/src/components/TabBar";
+import { Tabs } from "expo-router";
+
+export default function TabLayout() {
+  return (
+    <Tabs
+      tabBar={(props) => <HorecaTabBar {...props} />}
+      screenOptions={{ headerShown: false }}
+    >
+      <Tabs.Screen name="index" options={{ title: "Home" }} />
+      <Tabs.Screen name="search" options={{ title: "Search" }} />
+      <Tabs.Screen name="cart" options={{ title: "Cart" }} />
+      <Tabs.Screen name="wishlist" options={{ title: "Wishlist" }} />
+      <Tabs.Screen name="account" options={{ title: "Account" }} />
+    </Tabs>
+  );
+}
